@@ -1,0 +1,20 @@
+syntax = "proto3";
+package chat;
+
+message Message {
+    string body = 1;
+    string priority = 2;
+}
+
+message Response {
+    string status = 1;
+}
+
+message Empty {
+
+}
+
+service ChatService {
+    rpc PostMessageToSend(Message) returns (Empty) {}
+    rpc InitiatePerpetualMessageSender(Empty) returns (Empty) {}
+}
