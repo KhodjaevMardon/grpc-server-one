@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func fibonacci(n uint64) uint64 {
 	var (
@@ -19,4 +22,6 @@ func main() {
 	for i := 0; i < 10; i++ {
 		fmt.Printf("%d - %d\n", i, fibonacci(uint64(i)))
 	}
+	str := "asdqweeeww"
+	fmt.Print(strings.Count(str, "e"))
 }
